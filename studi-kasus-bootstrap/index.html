@@ -112,7 +112,7 @@
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
     <div class="container">
       <a class="navbar-brand brand-script" href="#" onclick="showPage('home')">
-        <i class="bi bi-flag-fill me-2"></i>Partai Demokrat
+        <i class="bi bi-flag-fill me-2"></i>Sitoluama Info
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
@@ -125,9 +125,9 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#" onclick="showPage('about')" id="nav-about">
+            <a class="nav-link" href="about.html" id="nav-about">
               <i class="bi bi-person me-1"></i>About
-            </a>
+           </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#" onclick="showPage('contact')" id="nav-contact">
@@ -144,8 +144,8 @@
     <!-- Hero Section -->
     <section class="hero-section">
       <div class="container text-center">
-        <h1 class="display-4 fw-bold mb-3">Blog Politik Partai Demokrat</h1>
-        <p class="lead mb-4">Menyuarakan aspirasi rakyat untuk Indonesia yang lebih demokratis dan sejahtera</p>
+        <h1 class="display-4 fw-bold mb-3">Sitoluama Info</h1>
+        <p class="lead mb-4">Info terkini seputar Negara Republik Sitoluama</p>
         <button class="btn btn-light btn-lg" onclick="scrollToBlog()">
           <i class="bi bi-arrow-down me-2"></i>Baca Artikel Terbaru
         </button>
@@ -157,26 +157,26 @@
       <div class="row">
         <!-- Main Content -->
         <div class="col-lg-8">
-          <h2 class="mb-4 fw-bold">Artikel Terbaru</h2>
+          <h2 class="mb-4 fw-bold">Berita Terbaru</h2>
           
           <!-- Featured Article -->
           <div class="card blog-card mb-4">
             <div class="row g-0">
               <div class="col-md-4">
-                <img src="https://via.placeholder.com/400x250/0d6efd/ffffff?text=Demokrasi+Indonesia" class="img-fluid rounded-start h-100" alt="Featured">
+                <img src="assets/vendor/image/1.jpg" class="img-fluid rounded-start h-100" alt="1">
               </div>
               <div class="col-md-8">
                 <div class="card-body">
                   <span class="badge bg-danger category-badge mb-2">FEATURED</span>
-                  <h5 class="card-title fw-bold">Memperkuat Demokrasi di Era Digital</h5>
-                  <p class="card-text">Bagaimana teknologi digital dapat menjadi alat untuk memperkuat partisipasi demokratis masyarakat Indonesia dalam proses politik...</p>
+                  <h5 class="card-title fw-bold">Seorang pemuda tersedak rokok.</h5>
+                  <p class="card-text">Bagaimana kronologi seorang pemuda berinisial BP tersedak rokok sewaktu ingin......</p>
                   <p class="blog-meta mb-2">
                     <i class="bi bi-calendar3 me-1"></i>12 September 2025 
-                    <i class="bi bi-person-fill ms-3 me-1"></i>Admin Demokrat
+                    <i class="bi bi-person-fill ms-3 me-1"></i>Admin Sitoluama
                   </p>
-                  <button class="btn btn-primary" onclick="showBlogDetail('featured')">
+                  <a href="featured.html" class="btn btn-primary">
                     Baca Selengkapnya <i class="bi bi-arrow-right ms-1"></i>
-                  </button>
+                  </a>
                 </div>
               </div>
             </div>
@@ -186,91 +186,52 @@
           <div class="row">
             <div class="col-md-6 mb-4">
               <div class="card blog-card h-100">
-                <img src="https://via.placeholder.com/350x200/0d6efd/ffffff?text=Ekonomi+Kerakyatan" class="card-img-top" alt="Ekonomi">
-                <div class="card-body">
-                  <span class="badge bg-success category-badge mb-2">EKONOMI</span>
-                  <h5 class="card-title">Program Ekonomi Kerakyatan</h5>
-                  <p class="card-text">Strategi pemberdayaan ekonomi rakyat melalui program-program yang berpihak pada UMKM...</p>
-                  <p class="blog-meta">
-                    <i class="bi bi-calendar3 me-1"></i>10 September 2025
-                  </p>
-                </div>
-                <div class="card-footer bg-transparent">
-                  <button class="btn btn-outline-primary" onclick="showBlogDetail('ekonomi')">
-                    Baca Artikel <i class="bi bi-arrow-right ms-1"></i>
-                  </button>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-6 mb-4">
-              <div class="card blog-card h-100">
-                <img src="https://via.placeholder.com/350x200/0d6efd/ffffff?text=Pendidikan+Berkualitas" class="card-img-top" alt="Pendidikan">
-                <div class="card-body">
-                  <span class="badge bg-info category-badge mb-2">PENDIDIKAN</span>
-                  <h5 class="card-title">Pendidikan Berkualitas untuk Semua</h5>
-                  <p class="card-text">Komitmen Partai Demokrat dalam meningkatkan kualitas pendidikan nasional...</p>
-                  <p class="blog-meta">
-                    <i class="bi bi-calendar3 me-1"></i>8 September 2025
-                  </p>
-                </div>
-                <div class="card-footer bg-transparent">
-                  <button class="btn btn-outline-primary" onclick="showBlogDetail('pendidikan')">
-                    Baca Artikel <i class="bi bi-arrow-right ms-1"></i>
-                  </button>
+                <div class="card-body d-flex">
+                  <img src="assets/vendor/image/3.png" class="rounded me-3" alt="3" style="width: 100px; height: 100px; object-fit: cover; flex-shrink: 0;">
+                  <div>
+                    <span class="badge bg-success category-badge mb-2">Bedah Rumah</span>
+                    <h5 class="card-title">Program Bedah Rumah</h5>
+                    <p class="card-text">Berikut adalah profil penerima bedah rumah yang diadakan oleh pemerintah setempat...</p>
+                    <p class="blog-meta mb-2">
+                      <i class="bi bi-calendar3 me-1"></i>10 September 2025
+                    </p>
+                    <button class="btn btn-outline-primary btn-sm" onclick="showBlogDetail('ekonomi')">
+                      Baca Artikel <i class="bi bi-arrow-right ms-1"></i>
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
 
             <div class="col-md-6 mb-4">
               <div class="card blog-card h-100">
-                <img src="https://via.placeholder.com/350x200/0d6efd/ffffff?text=Kesehatan+Masyarakat" class="card-img-top" alt="Kesehatan">
-                <div class="card-body">
-                  <span class="badge bg-warning category-badge mb-2">KESEHATAN</span>
-                  <h5 class="card-title">Sistem Kesehatan Universal</h5>
-                  <p class="card-text">Visi mewujudkan layanan kesehatan yang terjangkau dan berkualitas bagi seluruh rakyat...</p>
-                  <p class="blog-meta">
-                    <i class="bi bi-calendar3 me-1"></i>5 September 2025
-                  </p>
-                </div>
-                <div class="card-footer bg-transparent">
-                  <button class="btn btn-outline-primary" onclick="showBlogDetail('kesehatan')">
-                    Baca Artikel <i class="bi bi-arrow-right ms-1"></i>
-                  </button>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-6 mb-4">
-              <div class="card blog-card h-100">
-                <img src="https://via.placeholder.com/350x200/0d6efd/ffffff?text=Lingkungan+Hidup" class="card-img-top" alt="Lingkungan">
-                <div class="card-body">
-                  <span class="badge bg-secondary category-badge mb-2">LINGKUNGAN</span>
-                  <h5 class="card-title">Kebijakan Lingkungan Berkelanjutan</h5>
-                  <p class="card-text">Langkah-langkah konkret dalam menjaga kelestarian lingkungan untuk generasi mendatang...</p>
-                  <p class="blog-meta">
-                    <i class="bi bi-calendar3 me-1"></i>3 September 2025
-                  </p>
-                </div>
-                <div class="card-footer bg-transparent">
-                  <button class="btn btn-outline-primary" onclick="showBlogDetail('lingkungan')">
-                    Baca Artikel <i class="bi bi-arrow-right ms-1"></i>
-                  </button>
+                <div class="card-body d-flex">
+                  <img src="assets/vendor/image/4.jpg" class="rounded me-3" alt="4" style="width: 100px; height: 100px; object-fit: cover; flex-shrink: 0;">
+                  <div>
+                    <span class="badge bg-info category-badge mb-2">Orang Hilang</span>
+                    <h5 class="card-title">Orang Hilang !!!</h5>
+                    <p class="card-text">Dicari anak berusia 17 tahun yang berciri-cirikan seperti gambar berikut...</p>
+                    <p class="blog-meta mb-2">
+                      <i class="bi bi-calendar3 me-1"></i>8 September 2025
+                    </p>
+                    <button class="btn btn-outline-primary btn-sm" onclick="showBlogDetail('pendidikan')">
+                      Baca Artikel <i class="bi bi-arrow-right ms-1"></i>
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-
-
+        
         <!-- Sidebar -->
         <div class="col-lg-4">
           <!-- Categories Widget -->
           <div class="sidebar-widget">
             <h5 class="fw-bold mb-3"><i class="bi bi-tags-fill me-2"></i>Kategori</h5>
             <div class="d-flex flex-wrap gap-2">
-              <span class="badge bg-success">Ekonomi</span>
-              <span class="badge bg-info">Pendidikan</span>
+              <span class="badge bg-success">Bedah Rumah</span>
+              <span class="badge bg-info">Orang Hilang</span>
               <span class="badge bg-warning">Kesehatan</span>
               <span class="badge bg-secondary">Lingkungan</span>
               <span class="badge bg-danger">Politik</span>
@@ -284,15 +245,15 @@
             <div class="list-group list-group-flush">
               <a href="#" class="list-group-item list-group-item-action border-0 px-0">
                 <small class="text-muted">12 Sep 2025</small>
-                <p class="mb-0 fw-medium">Memperkuat Demokrasi di Era Digital</p>
+                <p class="mb-0 fw-medium">Seorang pemuda tersedak rokok</p>
               </a>
               <a href="#" class="list-group-item list-group-item-action border-0 px-0">
                 <small class="text-muted">10 Sep 2025</small>
-                <p class="mb-0 fw-medium">Program Ekonomi Kerakyatan</p>
+                <p class="mb-0 fw-medium">Program Bedah Rumah</p>
               </a>
               <a href="#" class="list-group-item list-group-item-action border-0 px-0">
                 <small class="text-muted">8 Sep 2025</small>
-                <p class="mb-0 fw-medium">Pendidikan Berkualitas untuk Semua</p>
+                <p class="mb-0 fw-medium">Orang Hilang !!!</p>
               </a>
             </div>
           </div>
@@ -412,115 +373,6 @@
     </div>
   </div>
 
-  <!-- ABOUT PAGE -->
-  <div id="about-page" class="page-content">
-    <div class="container my-5">
-      <div class="row justify-content-center">
-        <div class="col-lg-8">
-          <div class="text-center mb-5">
-            <h1 class="display-5 fw-bold mb-3">Tentang Developer</h1>
-            <p class="lead text-muted">Mengenal lebih dekat dengan pengembang website blog politik ini</p>
-          </div>
-
-          <div class="bg-white p-5 rounded shadow-sm">
-            <div class="row align-items-center mb-5">
-              <div class="col-md-4 text-center mb-4 mb-md-0">
-                <div class="author-profile">
-                  <img src="https://via.placeholder.com/150x150/0d6efd/ffffff?text=DEV" 
-                       class="rounded-circle border border-primary border-3" alt="Developer Photo">
-                </div>
-              </div>
-              <div class="col-md-8">
-                <h2 class="fw-bold mb-3">John Doe</h2>
-                <p class="lead text-primary mb-3">Full Stack Web Developer</p>
-                <p class="text-muted">
-                  Seorang developer yang passionate dalam menciptakan solusi digital untuk 
-                  meningkatkan transparansi dan partisipasi politik di Indonesia. Dengan pengalaman 
-                  lebih dari 5 tahun di bidang web development.
-                </p>
-                <div class="social-links mt-3">
-                  <a href="#" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
-                  <a href="#" title="GitHub"><i class="bi bi-github"></i></a>
-                  <a href="#" title="Twitter"><i class="bi bi-twitter"></i></a>
-                  <a href="#" title="Email"><i class="bi bi-envelope"></i></a>
-                </div>
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="col-md-6 mb-4">
-                <h4 class="fw-bold mb-3"><i class="bi bi-code-square me-2 text-primary"></i>Keahlian Teknis</h4>
-                <ul class="list-unstyled">
-                  <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>HTML5, CSS3, JavaScript</li>
-                  <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Bootstrap, Tailwind CSS</li>
-                  <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>React.js, Vue.js</li>
-                  <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Node.js, PHP</li>
-                  <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>MySQL, MongoDB</li>
-                </ul>
-              </div>
-              <div class="col-md-6 mb-4">
-                <h4 class="fw-bold mb-3"><i class="bi bi-mortarboard me-2 text-primary"></i>Pendidikan</h4>
-                <div class="mb-3">
-                  <h6 class="fw-bold">S1 Teknik Informatika</h6>
-                  <p class="text-muted mb-1">Universitas Indonesia</p>
-                  <small class="text-muted">2016 - 2020</small>
-                </div>
-                <div class="mb-3">
-                  <h6 class="fw-bold">Certified Web Developer</h6>
-                  <p class="text-muted mb-1">FreeCodeCamp</p>
-                  <small class="text-muted">2020</small>
-                </div>
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="col-12">
-                <h4 class="fw-bold mb-3"><i class="bi bi-briefcase me-2 text-primary"></i>Pengalaman Proyek</h4>
-                <div class="row">
-                  <div class="col-md-4 mb-3">
-                    <div class="card border-primary h-100">
-                      <div class="card-body">
-                        <h6 class="fw-bold">E-Government Portal</h6>
-                        <p class="small text-muted">Platform layanan publik digital untuk pemerintah daerah</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-4 mb-3">
-                    <div class="card border-primary h-100">
-                      <div class="card-body">
-                        <h6 class="fw-bold">Voting System</h6>
-                        <p class="small text-muted">Sistem pemungutan suara elektronik yang aman dan transparan</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-4 mb-3">
-                    <div class="card border-primary h-100">
-                      <div class="card-body">
-                        <h6 class="fw-bold">Political Dashboard</h6>
-                        <p class="small text-muted">Dashboard analitik untuk monitoring sentimen politik</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="text-center mt-5 pt-4 border-top">
-              <h5 class="fw-bold mb-3">Mari Berkolaborasi!</h5>
-              <p class="text-muted mb-4">
-                Tertarik untuk bekerja sama dalam proyek teknologi politik? 
-                Mari kita ciptakan solusi digital yang berdampak positif bagi demokrasi Indonesia.
-              </p>
-              <a href="#" onclick="showPage('contact')" class="btn btn-primary btn-lg">
-                <i class="bi bi-envelope me-2"></i>Hubungi Saya
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
   <!-- Footer -->
   <footer class="bg-dark text-white py-4">
     <div class="container">
@@ -579,6 +431,34 @@
         `
       }
     };
+
+    function showPage(page) {
+      // Hide all pages
+      const pages = document.querySelectorAll('.page-content');
+      pages.forEach(p => p.classList.remove('active'));
+      
+      // Show selected page
+      document.getElementById(page + '-page').classList.add('active');
+      
+      // Update navigation
+      const navLinks = document.querySelectorAll('.nav-link');
+      navLinks.forEach(link => link.classList.remove('active'));
+      document.getElementById('nav-' + page).classList.add('active');
+    }
+
+    function scrollToBlog() {
+      document.getElementById('blog-section').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function showBlogDetail(type) {
+      // Show blog detail page
+      showPage('blog-detail');
+      
+      // Populate content
+      if (blogArticles[type]) {
+        document.getElementById('blog-detail-content').innerHTML = blogArticles[type].content;
+      }
+    }
   </script>
 </body>
 </html>
