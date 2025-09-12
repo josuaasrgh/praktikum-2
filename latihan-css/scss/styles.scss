@@ -1,0 +1,661 @@
+@use "sass:color";
+
+// =============================================
+// VARIABLES - Tema SaaS Modern
+// =============================================
+
+// Warna Primer
+$primary-color: #4361ee;
+$primary-dark: #3a56d4;
+$primary-light: #6178f1;
+
+// Warna Sekunder
+$secondary-color: #2ecc71;
+$secondary-dark: #27ae60;
+$secondary-light: #4cdb87;
+
+// Warna Netral
+$dark-color: #2d3748;
+$light-color: #f8f9fa;
+$gray-color: #a0aec0;
+$white-color: #ffffff;
+
+// Warna Status
+$success-color: #48bb78;
+$warning-color: #ecc94b;
+$error-color: #f56565;
+$info-color: #4299e1;
+
+// Typography
+$font-stack: "Inter", "Arial", sans-serif;
+$font-size-xs: 0.75rem;
+$font-size-sm: 0.875rem;
+$font-size-base: 1rem;
+$font-size-lg: 1.125rem;
+$font-size-xl: 1.25rem;
+$font-size-2xl: 1.5rem;
+$font-size-3xl: 1.875rem;
+$font-size-4xl: 2.25rem;
+
+// Spacing
+$spacing: 1rem;
+$spacing-xs: calc($spacing / 4);
+$spacing-sm: calc($spacing / 2);
+$spacing-md: $spacing;
+$spacing-lg: $spacing * 1.5;
+$spacing-xl: $spacing * 2;
+$spacing-2xl: $spacing * 3;
+
+// Border Radius
+$border-radius-sm: 0.25rem;
+$border-radius: 0.375rem;
+$border-radius-lg: 0.5rem;
+$border-radius-xl: 0.75rem;
+
+// Shadow
+$shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+$shadow:
+    0 1px 3px 0 rgba(0, 0, 0, 0.1),
+    0 1px 2px 0 rgba(0, 0, 0, 0.06);
+$shadow-md:
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+$shadow-lg:
+    0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+
+// Breakpoints
+$breakpoint-sm: 640px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 1024px;
+$breakpoint-xl: 1280px;
+$breakpoint-2xl: 1536px;
+
+// =============================================
+// MIXINS - Utilities yang dapat digunakan kembali
+// =============================================
+
+// Flexbox Center
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// Flexbox Between
+@mixin flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+// Card Style
+@mixin card {
+    background-color: $white-color;
+    border-radius: $border-radius-lg;
+    box-shadow: $shadow;
+    padding: $spacing-lg;
+    transition: box-shadow 0.3s ease;
+
+    &:hover {
+        box-shadow: $shadow-md;
+    }
+}
+
+// Button Style
+@mixin button($bg-color, $text-color: $white-color) {
+    background-color: $bg-color;
+    color: $text-color;
+    border: none;
+    padding: $spacing-sm $spacing-lg;
+    border-radius: $border-radius;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: $spacing-xs;
+
+    &:hover {
+        background-color: color.adjust($bg-color, $lightness: -10%);
+        transform: translateY(-1px);
+    }
+
+    &:active {
+        transform: translateY(0);
+    }
+
+    i {
+        font-size: $font-size-lg;
+    }
+}
+
+// =============================================
+// GLOBAL STYLES - Full Screen & Responsive
+// =============================================
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    font-family: $font-stack;
+    font-size: $font-size-base;
+    line-height: 1.6;
+    color: $dark-color;
+    overflow-x: hidden;
+}
+
+// Layout Container - Full Width
+.container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+// Header - Full Width
+.header {
+    background: linear-gradient(135deg, $primary-color 0%, $primary-dark 100%);
+    color: $white-color;
+    padding: $spacing-xl 0;
+    box-shadow: $shadow-md;
+    width: 100%;
+
+    .header-content {
+        @include flex-between;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 $spacing-xl;
+
+        .logo {
+            font-size: $font-size-2xl;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: $spacing-sm;
+
+            i {
+                font-size: $font-size-3xl;
+            }
+        }
+
+        .nav {
+            display: flex;
+            gap: $spacing-lg;
+
+            a {
+                color: rgba($white-color, 0.9);
+                text-decoration: none;
+                font-weight: 500;
+                transition: color 0.3s;
+
+                &:hover {
+                    color: $white-color;
+                }
+            }
+
+            .cta-button {
+                @include button($secondary-color);
+                margin-left: $spacing;
+            }
+        }
+    }
+}
+
+// Hero Section - Full Width
+.hero {
+    padding: $spacing-2xl 0;
+    text-align: center;
+    background-color: $light-color;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+
+    h1 {
+        font-size: $font-size-4xl;
+        color: $dark-color;
+        margin-bottom: $spacing;
+        font-weight: 800;
+        line-height: 1.2;
+    }
+
+    p {
+        font-size: $font-size-xl;
+        color: $gray-color;
+        max-width: 800px;
+        margin: 0 auto $spacing-xl;
+        line-height: 1.6;
+    }
+
+    .hero-buttons {
+        display: flex;
+        gap: $spacing;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        .primary-button {
+            @include button($primary-color);
+            min-width: 160px;
+        }
+
+        .secondary-button {
+            @include button(transparent, $primary-color);
+            border: 2px solid $primary-color;
+            min-width: 160px;
+
+            &:hover {
+                background-color: $primary-color;
+                color: $white-color;
+            }
+        }
+    }
+}
+
+// Features Section - Full Width
+.features {
+    padding: $spacing-2xl 0;
+    width: 100%;
+
+    .section-title {
+        text-align: center;
+        margin-bottom: $spacing-xl;
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0 $spacing-xl;
+
+        h2 {
+            font-size: $font-size-3xl;
+            color: $dark-color;
+            margin-bottom: $spacing-sm;
+        }
+
+        p {
+            color: $gray-color;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+    }
+
+    .features-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: $spacing-lg;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 $spacing-xl;
+
+        .feature-card {
+            @include card;
+            text-align: center;
+            padding: $spacing-xl;
+            height: 100%;
+
+            i {
+                font-size: 2.5rem;
+                color: $primary-color;
+                margin-bottom: $spacing;
+            }
+
+            h3 {
+                font-size: $font-size-xl;
+                margin-bottom: $spacing-sm;
+                color: $dark-color;
+            }
+
+            p {
+                color: $gray-color;
+                line-height: 1.6;
+            }
+        }
+    }
+}
+
+// Pricing Section - Full Width
+.pricing {
+    padding: $spacing-2xl 0;
+    background-color: $light-color;
+    width: 100%;
+
+    .section-title {
+        text-align: center;
+        margin-bottom: $spacing-xl;
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0 $spacing-xl;
+
+        h2 {
+            font-size: $font-size-3xl;
+            color: $dark-color;
+            margin-bottom: $spacing-sm;
+        }
+
+        p {
+            color: $gray-color;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+    }
+
+    .pricing-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: $spacing-lg;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 $spacing-xl;
+
+        .pricing-card {
+            @include card;
+            text-align: center;
+            padding: $spacing-xl;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+
+            &.popular {
+                border: 2px solid $primary-color;
+
+                .popular-badge {
+                    position: absolute;
+                    top: -12px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    background-color: $primary-color;
+                    color: $white-color;
+                    padding: $spacing-xs $spacing-lg;
+                    border-radius: $border-radius-xl;
+                    font-size: $font-size-sm;
+                    font-weight: 600;
+                }
+            }
+
+            .plan-name {
+                font-size: $font-size-xl;
+                color: $dark-color;
+                margin-bottom: $spacing;
+            }
+
+            .plan-price {
+                font-size: $font-size-3xl;
+                font-weight: 700;
+                color: $dark-color;
+                margin-bottom: $spacing;
+
+                span {
+                    font-size: $font-size-lg;
+                    color: $gray-color;
+                    font-weight: 400;
+                }
+            }
+
+            .plan-features {
+                list-style: none;
+                padding: 0;
+                margin: 0 0 $spacing-xl;
+                flex: 1;
+
+                li {
+                    padding: $spacing-sm 0;
+                    color: $gray-color;
+                    border-bottom: 1px solid rgba($gray-color, 0.1);
+
+                    &:last-child {
+                        border-bottom: none;
+                    }
+                }
+            }
+
+            .plan-button {
+                @include button($primary-color);
+                width: 100%;
+            }
+        }
+    }
+}
+
+// Footer - Full Width
+.footer {
+    background-color: $dark-color;
+    color: $white-color;
+    padding: $spacing-xl 0;
+    width: 100%;
+    margin-top: auto;
+
+    .footer-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: $spacing-xl;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 $spacing-xl;
+
+        .footer-logo {
+            font-size: $font-size-2xl;
+            font-weight: 700;
+            margin-bottom: $spacing;
+            display: flex;
+            align-items: center;
+            gap: $spacing-sm;
+        }
+
+        .footer-description {
+            color: rgba($white-color, 0.7);
+            line-height: 1.6;
+            margin-bottom: $spacing;
+        }
+
+        .social-links {
+            display: flex;
+            gap: $spacing;
+
+            a {
+                color: rgba($white-color, 0.7);
+                font-size: $font-size-xl;
+                transition: color 0.3s;
+
+                &:hover {
+                    color: $primary-color;
+                }
+            }
+        }
+
+        .footer-links {
+            h3 {
+                font-size: $font-size-lg;
+                margin-bottom: $spacing;
+                color: $white-color;
+            }
+
+            ul {
+                list-style: none;
+                padding: 0;
+
+                li {
+                    margin-bottom: $spacing-sm;
+
+                    a {
+                        color: rgba($white-color, 0.7);
+                        text-decoration: none;
+                        transition: color 0.3s;
+
+                        &:hover {
+                            color: $primary-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .footer-bottom {
+        text-align: center;
+        margin-top: $spacing-xl;
+        padding-top: $spacing;
+        border-top: 1px solid rgba($white-color, 0.1);
+        color: rgba($white-color, 0.7);
+        font-style: italic;
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: $spacing $spacing-xl 0;
+    }
+}
+
+// =============================================
+// RESPONSIVE DESIGN - Media Queries
+// =============================================
+
+// Large Desktop
+@media (min-width: $breakpoint-xl) {
+    .hero {
+        h1 {
+            font-size: 3.5rem;
+        }
+    }
+}
+
+// Tablet
+@media (max-width: $breakpoint-md) {
+    .header {
+        .header-content {
+            flex-direction: column;
+            gap: $spacing;
+            padding: 0 $spacing;
+
+            .nav {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: $spacing-sm;
+
+                .cta-button {
+                    margin-left: 0;
+                    margin-top: $spacing-sm;
+                }
+            }
+        }
+    }
+
+    .hero {
+        padding: $spacing-xl $spacing;
+
+        h1 {
+            font-size: $font-size-3xl;
+        }
+
+        p {
+            font-size: $font-size-lg;
+        }
+
+        .hero-buttons {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    .features,
+    .pricing {
+        .section-title {
+            padding: 0 $spacing;
+        }
+
+        .features-grid,
+        .pricing-grid {
+            padding: 0 $spacing;
+        }
+    }
+
+    .footer {
+        .footer-content {
+            padding: 0 $spacing;
+        }
+
+        .footer-bottom {
+            padding: $spacing $spacing 0;
+        }
+    }
+}
+
+// Mobile
+@media (max-width: $breakpoint-sm) {
+    .header {
+        .header-content {
+            .nav {
+                flex-direction: column;
+                width: 100%;
+
+                a {
+                    text-align: center;
+                    padding: $spacing-sm 0;
+                    border-bottom: 1px solid rgba($white-color, 0.1);
+
+                    &:last-child {
+                        border-bottom: none;
+                    }
+                }
+            }
+        }
+    }
+
+    .hero {
+        h1 {
+            font-size: $font-size-2xl;
+        }
+
+        p {
+            font-size: $font-size-base;
+        }
+    }
+
+    .features {
+        .features-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .pricing {
+        .pricing-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .footer {
+        .footer-content {
+            grid-template-columns: 1fr;
+            text-align: center;
+
+            .social-links {
+                justify-content: center;
+            }
+        }
+    }
+}
+
+// Small Mobile
+@media (max-width: 400px) {
+    .hero {
+        h1 {
+            font-size: $font-size-xl;
+        }
+    }
+
+    .features,
+    .pricing {
+        .section-title {
+            h2 {
+                font-size: $font-size-2xl;
+            }
+        }
+    }
+}
